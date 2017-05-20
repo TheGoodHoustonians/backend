@@ -18,7 +18,7 @@ config :backend, Backend.Endpoint,
   secret_key_base: System.get_env("SECRET_KEY_BASE")
 
 # Configure your database
-config :my_app, Backend.Repo,
+config :backend, Backend.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: System.get_env("DATABASE_URL"),
   size: 20 # The amount of database connections in the pool
