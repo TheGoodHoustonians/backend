@@ -1,15 +1,15 @@
 defmodule Backend.Api.SubstanceAbuseTreatmentView do
   use Backend.Web, :view
 
-  def render("index.json", %{scs: scs}) do
-    %{data: render_many(scs, Backend.Api.SubstanceAbuseTreatmentView, "shelter_capability.json")}
+  def render("index.json", %{sats: sats}) do
+    %{data: render_many(sats, Backend.Api.SubstanceAbuseTreatmentView, "shelter_capability.json")}
   end
 
-  def render("show.json", %{sc: sc}) do
-    %{data: render_one(sc, Backend.Api.SubstanceAbuseTreatmentView, "shelter_capability.json")}
+  def render("show.json", %{sat: sat}) do
+    %{data: render_one(sat, Backend.Api.SubstanceAbuseTreatmentView, "shelter_capability.json")}
   end
 
-  def render("shelter_capability.json", %{sc: sc}) do
-    sc
+  def render("shelter_capability.json", %{sat: sat}) do
+    sat
   end
 end
