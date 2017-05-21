@@ -47,8 +47,7 @@ defmodule Backend.Router do
     resources "/client_referral_sources", ClientReferralSourceController
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", Backend do
-  #   pipe_through :api
-  # end
+  scope "/api", Backend do
+    pipe_through :api
+  end
 end
