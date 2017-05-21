@@ -1,0 +1,18 @@
+<h2>Show client requirement</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @client_requirement.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @client_requirement.description %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: client_requirement_path(@conn, :edit, @client_requirement) %>
+<%= link "Back", to: client_requirement_path(@conn, :index) %>

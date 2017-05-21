@@ -1,0 +1,28 @@
+<h2>Listing client referral sourcs</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for client_referral_source <- @client_referral_sourcs do %>
+    <tr>
+      <td><%= client_referral_source.name %></td>
+      <td><%= client_referral_source.description %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: client_referral_source_path(@conn, :show, client_referral_source), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: client_referral_source_path(@conn, :edit, client_referral_source), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: client_referral_source_path(@conn, :delete, client_referral_source), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New client referral source", to: client_referral_source_path(@conn, :new) %>

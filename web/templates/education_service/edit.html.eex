@@ -1,0 +1,6 @@
+<h2>Edit education service</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: education_service_path(@conn, :update, @education_service) %>
+
+<%= link "Back", to: education_service_path(@conn, :index) %>

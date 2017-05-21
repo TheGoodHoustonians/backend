@@ -1,0 +1,18 @@
+<h2>Show legal service</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @legal_service.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @legal_service.description %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: legal_service_path(@conn, :edit, @legal_service) %>
+<%= link "Back", to: legal_service_path(@conn, :index) %>

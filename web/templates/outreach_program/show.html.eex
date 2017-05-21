@@ -1,0 +1,18 @@
+<h2>Show outreach program</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @outreach_program.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @outreach_program.description %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: outreach_program_path(@conn, :edit, @outreach_program) %>
+<%= link "Back", to: outreach_program_path(@conn, :index) %>

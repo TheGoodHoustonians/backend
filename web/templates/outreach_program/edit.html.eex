@@ -1,0 +1,6 @@
+<h2>Edit outreach program</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: outreach_program_path(@conn, :update, @outreach_program) %>
+
+<%= link "Back", to: outreach_program_path(@conn, :index) %>

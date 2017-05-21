@@ -1,0 +1,28 @@
+<h2>Listing target demographics</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for target_demographic <- @target_demographics do %>
+    <tr>
+      <td><%= target_demographic.name %></td>
+      <td><%= target_demographic.description %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: target_demographic_path(@conn, :show, target_demographic), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: target_demographic_path(@conn, :edit, target_demographic), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: target_demographic_path(@conn, :delete, target_demographic), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New target demographic", to: target_demographic_path(@conn, :new) %>

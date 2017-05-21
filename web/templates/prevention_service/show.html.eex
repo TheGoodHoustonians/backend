@@ -1,0 +1,18 @@
+<h2>Show prevention service</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @prevention_service.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @prevention_service.description %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: prevention_service_path(@conn, :edit, @prevention_service) %>
+<%= link "Back", to: prevention_service_path(@conn, :index) %>

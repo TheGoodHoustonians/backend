@@ -1,0 +1,28 @@
+<h2>Listing client requirements</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for client_requirement <- @client_requirements do %>
+    <tr>
+      <td><%= client_requirement.name %></td>
+      <td><%= client_requirement.description %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: client_requirement_path(@conn, :show, client_requirement), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: client_requirement_path(@conn, :edit, client_requirement), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: client_requirement_path(@conn, :delete, client_requirement), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New client requirement", to: client_requirement_path(@conn, :new) %>

@@ -1,0 +1,18 @@
+<h2>Show client referral source</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @client_referral_source.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @client_referral_source.description %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: client_referral_source_path(@conn, :edit, @client_referral_source) %>
+<%= link "Back", to: client_referral_source_path(@conn, :index) %>

@@ -16,6 +16,9 @@
       <ul class="nav navbar-nav navbar-right">
         <%= if @conn.assigns[:current_user] do %>
           <li>
+            <a href="<%= page_path(@conn, :admin_index) %>">Admin</a>
+          </li>
+          <li>
             <a id="header-current-user-name" href="/"><%= @conn.assigns[:current_user].display_name %></a>
           </li>
           <li>

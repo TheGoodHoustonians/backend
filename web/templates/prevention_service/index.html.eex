@@ -1,0 +1,28 @@
+<h2>Listing prevention services</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for prevention_service <- @prevention_services do %>
+    <tr>
+      <td><%= prevention_service.name %></td>
+      <td><%= prevention_service.description %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: prevention_service_path(@conn, :show, prevention_service), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: prevention_service_path(@conn, :edit, prevention_service), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: prevention_service_path(@conn, :delete, prevention_service), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New prevention service", to: prevention_service_path(@conn, :new) %>

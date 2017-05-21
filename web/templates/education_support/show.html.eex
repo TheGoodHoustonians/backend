@@ -1,0 +1,18 @@
+<h2>Show education support</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @education_support.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @education_support.description %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: education_support_path(@conn, :edit, @education_support) %>
+<%= link "Back", to: education_support_path(@conn, :index) %>

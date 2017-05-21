@@ -1,0 +1,28 @@
+<h2>Listing transportation assistances</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for transportation_assistance <- @transportation_assistances do %>
+    <tr>
+      <td><%= transportation_assistance.name %></td>
+      <td><%= transportation_assistance.description %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: transportation_assistance_path(@conn, :show, transportation_assistance), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: transportation_assistance_path(@conn, :edit, transportation_assistance), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: transportation_assistance_path(@conn, :delete, transportation_assistance), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New transportation assistance", to: transportation_assistance_path(@conn, :new) %>

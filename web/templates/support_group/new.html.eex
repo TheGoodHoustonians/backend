@@ -1,0 +1,6 @@
+<h2>New support group</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: support_group_path(@conn, :create) %>
+
+<%= link "Back", to: support_group_path(@conn, :index) %>

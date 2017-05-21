@@ -20,6 +20,7 @@ defmodule Backend.Router do
     resources "/users", UserController
 
     get "/", PageController, :index
+    get "/admin", PageController, :admin_index
 
     get "/login", AuthController, :sign_in
     post "/login", AuthController, :create
@@ -27,6 +28,23 @@ defmodule Backend.Router do
 
     get "/registration/new", UserController, :new
     post "/registration", UserController, :create
+
+    # here we go
+    resources "/client_requirements", ClientRequirementController
+    resources "/substance_abuse_treatments", SubstanceAbuseTreatmentController
+    resources "/target_demographics", TargetDemographicController
+    resources "/support_groups", SupportGroupController
+    resources "/outreach_programs", OutreachProgramController
+    resources "/payment_methods", PaymentMethodController
+    resources "/shelter_capabilities", ShelterCapabilityController
+    resources "/services", ServiceController
+    resources "/medical_amenities", MedicalAmenityController
+    resources "/transportation_assistances", TransportationAssistanceController
+    resources "/education_services", EducationServiceController
+    resources "/education_supports", EducationSupportController
+    resources "/prevention_services", PreventionServiceController
+    resources "/legal_services", LegalServiceController
+    resources "/client_referral_sources", ClientReferralSourceController
   end
 
   # Other scopes may use custom stacks.

@@ -1,0 +1,18 @@
+<h2>Show medical amenity</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @medical_amenity.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @medical_amenity.description %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: medical_amenity_path(@conn, :edit, @medical_amenity) %>
+<%= link "Back", to: medical_amenity_path(@conn, :index) %>

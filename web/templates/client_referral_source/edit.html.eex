@@ -1,0 +1,6 @@
+<h2>Edit client referral source</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: client_referral_source_path(@conn, :update, @client_referral_source) %>
+
+<%= link "Back", to: client_referral_source_path(@conn, :index) %>

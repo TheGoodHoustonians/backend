@@ -11,7 +11,7 @@ defmodule Backend.AuthController do
       {:error, message} ->
         conn
         |> put_flash(:error, message)
-        |> render("new.html")
+        |> render("login.html")
       {:ok, user} ->
         conn
         |> put_session(:current_user, user.id)
@@ -22,7 +22,7 @@ defmodule Backend.AuthController do
   def create(conn, _params) do
     conn
     |> put_flash(:error, "Email and Password are required")
-    |> render("new.html")
+    |> render("login.html")
   end
 
   def sign_out(conn, _params) do

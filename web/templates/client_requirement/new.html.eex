@@ -1,0 +1,6 @@
+<h2>New client requirement</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: client_requirement_path(@conn, :create) %>
+
+<%= link "Back", to: client_requirement_path(@conn, :index) %>

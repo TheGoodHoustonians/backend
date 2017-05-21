@@ -1,0 +1,18 @@
+<h2>Show target demographic</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @target_demographic.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @target_demographic.description %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: target_demographic_path(@conn, :edit, @target_demographic) %>
+<%= link "Back", to: target_demographic_path(@conn, :index) %>

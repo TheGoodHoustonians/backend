@@ -1,0 +1,18 @@
+<h2>Show shelter capability</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @shelter_capability.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @shelter_capability.description %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: shelter_capability_path(@conn, :edit, @shelter_capability) %>
+<%= link "Back", to: shelter_capability_path(@conn, :index) %>

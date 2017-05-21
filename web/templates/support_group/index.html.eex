@@ -1,0 +1,28 @@
+<h2>Listing support groups</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for support_group <- @support_groups do %>
+    <tr>
+      <td><%= support_group.name %></td>
+      <td><%= support_group.description %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: support_group_path(@conn, :show, support_group), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: support_group_path(@conn, :edit, support_group), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: support_group_path(@conn, :delete, support_group), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New support group", to: support_group_path(@conn, :new) %>

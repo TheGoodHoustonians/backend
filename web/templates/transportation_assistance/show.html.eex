@@ -1,0 +1,18 @@
+<h2>Show transportation assistance</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @transportation_assistance.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @transportation_assistance.description %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: transportation_assistance_path(@conn, :edit, @transportation_assistance) %>
+<%= link "Back", to: transportation_assistance_path(@conn, :index) %>

@@ -1,0 +1,18 @@
+<h2>Show support group</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @support_group.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @support_group.description %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: support_group_path(@conn, :edit, @support_group) %>
+<%= link "Back", to: support_group_path(@conn, :index) %>

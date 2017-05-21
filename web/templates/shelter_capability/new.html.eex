@@ -1,0 +1,6 @@
+<h2>New shelter capability</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: shelter_capability_path(@conn, :create) %>
+
+<%= link "Back", to: shelter_capability_path(@conn, :index) %>

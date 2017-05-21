@@ -1,0 +1,28 @@
+<h2>Listing substance abuse treatments</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for substance_abuse_treatment <- @substance_abuse_treatments do %>
+    <tr>
+      <td><%= substance_abuse_treatment.name %></td>
+      <td><%= substance_abuse_treatment.description %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: substance_abuse_treatment_path(@conn, :show, substance_abuse_treatment), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: substance_abuse_treatment_path(@conn, :edit, substance_abuse_treatment), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: substance_abuse_treatment_path(@conn, :delete, substance_abuse_treatment), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New substance abuse treatment", to: substance_abuse_treatment_path(@conn, :new) %>
