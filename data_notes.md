@@ -66,4 +66,20 @@
 | Surgical Treatments                             | Medical      |                               |
 | Convalescence                                   | Medical      |                               |
 | Other (please specify)                          | Medical      |                               |
-| Impatient Rehab                                 | Medical      |                               |
+| Impatient Rehab                                 | Substance    |                               |
+| Outpatient Rehab                                |              |                               |
+| Group Therapy                                   |              |                               |
+| Support Groups                                  |              |                               |
+| Other                                           |              |                               |
+| Support Groups                                  |              | Exclude                       |
+| Medicare                                        | Insurance    |                               |
+| Medicaid                                        | Insurance    |                               |
+| CHIP                                            | Insurance    |                               |
+| No Insurance Required                           | Insurance    |                               |
+| Gold Card                                       | Insurance    |                               |
+| Military Health Insurance                       | Insurance    |                               |
+| Private                                         |              |                               |
+| Self-Pay                                        |              |                               |
+| Sliding Scale Fees                              |              |                               |
+| Other                                           |              |                               |
+|                                                 |              |                               |
