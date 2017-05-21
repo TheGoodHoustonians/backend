@@ -1,0 +1,28 @@
+<h2>Listing education supports</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for education_support <- @education_supports do %>
+    <tr>
+      <td><%= education_support.name %></td>
+      <td><%= education_support.description %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: education_support_path(@conn, :show, education_support), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: education_support_path(@conn, :edit, education_support), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: education_support_path(@conn, :delete, education_support), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New education support", to: education_support_path(@conn, :new) %>
