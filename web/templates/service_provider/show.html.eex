@@ -1,0 +1,43 @@
+<h2>Show service provider</h2>
+
+<ul>
+
+  <li>
+    <strong>Organization name:</strong>
+    <%= @service_provider.organization_name %>
+  </li>
+
+  <li>
+    <strong>Contact name:</strong>
+    <%= @service_provider.contact_name %>
+  </li>
+
+  <li>
+    <strong>Website:</strong>
+    <%= @service_provider.website %>
+  </li>
+
+  <li>
+    <strong>Contact phone:</strong>
+    <%= @service_provider.contact_phone %>
+  </li>
+
+  <li>
+    <strong>Email:</strong>
+    <%= @service_provider.email %>
+  </li>
+
+  <li>
+    <strong>Languages:</strong>
+    <%= @service_provider.languages %>
+  </li>
+
+  <li>
+    <strong>Hotline phone:</strong>
+    <%= @service_provider.hotline_phone %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: service_provider_path(@conn, :edit, @service_provider) %>
+<%= link "Back", to: service_provider_path(@conn, :index) %>
