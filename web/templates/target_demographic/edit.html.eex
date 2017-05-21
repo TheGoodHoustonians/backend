@@ -1,0 +1,6 @@
+<h2>Edit target demographic</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: target_demographic_path(@conn, :update, @target_demographic) %>
+
+<%= link "Back", to: target_demographic_path(@conn, :index) %>

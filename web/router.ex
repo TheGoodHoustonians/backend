@@ -31,6 +31,7 @@ defmodule Backend.Router do
     # here we go
     resources "/client_requirements", ClientRequirementController
     resources "/substance_abuse_treatments", SubstanceAbuseTreatmentController
+    resources "/target_demographics", TargetDemographicController
 
 
   end
