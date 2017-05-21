@@ -78,8 +78,43 @@
 | No Insurance Required                           | Insurance    |                               |
 | Gold Card                                       | Insurance    |                               |
 | Military Health Insurance                       | Insurance    |                               |
-| Private                                         |              |                               |
-| Self-Pay                                        |              |                               |
-| Sliding Scale Fees                              |              |                               |
+| Private                                         | Insurance    |                               |
+| Self-Pay                                        | Insurance    |                               |
+| Sliding Scale Fees                              | Insurance    |                               |
+| Other                                           | Insurance    |                               |
+| Hot Meals                                       | Ameneties    |                               |
+| Snacks/Small Meals                              |              |                               |
+| Food Pantry                                     |              |                               |
+| Clothing                                        |              |                               |
+| Hygiene Products                                |              |                               |
+| Showers                                         |              |                               |
+| Case Management                                 |              |                               |
+| Counseling                                      |              |                               |
+| Tattoo Removal                                  |              |                               |
+| Faith based                                     |              |                               |
+| Staff/Volunteers Transport Clients              |              |                               |
+| Financial Assistance                            |              |                               |
+| Provide Gas Money                               |              |                               |
+| Provides Airfare Assistance                     |              |                               |
+| Provides Bus Passes                             |              |                               |
 | Other                                           |              |                               |
+| ESL Classes/Support                             | Education    |                               |
+| GED Classes/Support                             |              |                               |
+| GED Support                                     |              |                               |
+| ABE Classes                                     |              |                               |
+| Literacy Classes                                |              |                               |
+| Job Readiness                                   |              |                               |
+| Vocational Training                             |              |                               |
+| Financial/Budgeting Help                        |              |                               |
+| Computer Classes                                |              |                               |
+| Nutrition/Health Class                          |              |                               |
+| Fitness Classes                                 |              |                               |
+| Parenting Class                                 |              |                               |
+| Anger Management                                |              |                               |
+| PAL (Foster Care)                               |              |                               |
+| Mentorship                                      |              |                               |
+| Other                                           |              |                               |
+|                                                 |              |                               |
+|                                                 |              |                               |
+|                                                 |              |                               |
 |                                                 |              |                               |
