@@ -1,0 +1,18 @@
+<h2>Show substance abuse treatment</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @substance_abuse_treatment.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @substance_abuse_treatment.description %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: substance_abuse_treatment_path(@conn, :edit, @substance_abuse_treatment) %>
+<%= link "Back", to: substance_abuse_treatment_path(@conn, :index) %>

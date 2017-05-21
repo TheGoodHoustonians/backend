@@ -27,6 +27,12 @@ defmodule Backend.Router do
 
     get "/registration/new", UserController, :new
     post "/registration", UserController, :create
+
+    # here we go
+    resources "/client_requirements", ClientRequirementController
+    resources "/substance_abuse_treatments", SubstanceAbuseTreatmentController
+
+
   end
 
   # Other scopes may use custom stacks.

@@ -1,0 +1,6 @@
+<h2>Edit substance abuse treatment</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: substance_abuse_treatment_path(@conn, :update, @substance_abuse_treatment) %>
+
+<%= link "Back", to: substance_abuse_treatment_path(@conn, :index) %>
