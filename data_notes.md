@@ -32,38 +32,38 @@
 | If yes, please explain                          |              | Exclude                       |
 | Evidence based?                                 |              | Exclude                       |
 | If yes, please explain                          |              | Exclude                       |
-| Which languages?                                |              |                               |
-| Do you do outreach?                             |              |                               |
-| If yes, please specify                          |              |                               |
-| Details for outreach                            |              |                               |
-| Emergency Shelter                               |              |                               |
-| Short-term Shelter                              |              |                               |
-| Long-term Shelter                               |              |                               |
-| Resting Place                                   |              |                               |
-| Drop-in Center                                  |              |                               |
-| Safe House                                      |              |                               |
-| Transitional Living                             |              |                               |
-| Permanent Housing                               |              |                               |
-| Rapid Re-housing                                |              |                               |
-| Residential Treatment Facility                  |              |                               |
-| Provides Access to Healthcare                   |              |                               |
-| Other                                           |              |                               |
-| Full Range Medical Treatment                    |              |                               |
-| Primary Care                                    |              |                               |
-| Vision                                          |              |                               |
-| Dental                                          |              |                               |
-| HIV Testing                                     |              |                               |
-| STI Testing                                     |              |                               |
-| HIV Treatment                                   |              |                               |
-| STI Treatment                                   |              |                               |
-| Pregnancy Testing                               |              |                               |
-| Pediatric Care                                  |              |                               |
-| Women's Health                                  |              |                               |
-| Acute Sexual Assault / Sexual Abuse Evaluations |              |                               |
-| Substance Abuse Treatment                       |              |                               |
-| Counseling                                      |              |                               |
-| Mental Health/Psychiatric Services              |              |                               |
-| Surgical Treatments                             |              |                               |
-| Convalescence                                   |              |                               |
-| Other (please specify)                          |              |                               |
-| Impatient Rehab                                 |              |                               |
+| Which languages?                                | Languages    |                               |
+| Do you do outreach?                             |              | Exclude                       |
+| If yes, please specify                          |              | Exclude                       |
+| Details for outreach                            |              | Exclude                       |
+| Emergency Shelter                               | Shelter      |                               |
+| Short-term Shelter                              | Shelter      |                               |
+| Long-term Shelter                               | Shelter      |                               |
+| Resting Place                                   | Shelter      |                               |
+| Drop-in Center                                  | Shelter      |                               |
+| Safe House                                      | Shelter      |                               |
+| Transitional Living                             | Shelter      |                               |
+| Permanent Housing                               | Shelter      |                               |
+| Rapid Re-housing                                | Shelter      |                               |
+| Residential Treatment Facility                  | Shelter      |                               |
+| Provides Access to Healthcare                   |              | Exclude                       |
+| Other                                           |              | Exclude                       |
+| Full Range Medical Treatment                    | Medical      |                               |
+| Primary Care                                    | Medical      |                               |
+| Vision                                          | Medical      |                               |
+| Dental                                          | Medical      |                               |
+| HIV Testing                                     | Medical      |                               |
+| STI Testing                                     | Medical      |                               |
+| HIV Treatment                                   | Medical      |                               |
+| STI Treatment                                   | Medical      |                               |
+| Pregnancy Testing                               | Medical      |                               |
+| Pediatric Care                                  | Medical      |                               |
+| Women's Health                                  | Medical      |                               |
+| Acute Sexual Assault / Sexual Abuse Evaluations | Medical      |                               |
+| Substance Abuse Treatment                       | Medical      |                               |
+| Counseling                                      | Medical      |                               |
+| Mental Health/Psychiatric Services              | Medical      |                               |
+| Surgical Treatments                             | Medical      |                               |
+| Convalescence                                   | Medical      |                               |
+| Other (please specify)                          | Medical      |                               |
+| Impatient Rehab                                 | Medical      |                               |
