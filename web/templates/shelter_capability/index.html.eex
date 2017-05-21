@@ -1,0 +1,28 @@
+<h2>Listing shelter capabilities</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for shelter_capability <- @shelter_capabilities do %>
+    <tr>
+      <td><%= shelter_capability.name %></td>
+      <td><%= shelter_capability.description %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: shelter_capability_path(@conn, :show, shelter_capability), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: shelter_capability_path(@conn, :edit, shelter_capability), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: shelter_capability_path(@conn, :delete, shelter_capability), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New shelter capability", to: shelter_capability_path(@conn, :new) %>
