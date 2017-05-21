@@ -1,0 +1,6 @@
+<h2>Edit transportation assistance</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: transportation_assistance_path(@conn, :update, @transportation_assistance) %>
+
+<%= link "Back", to: transportation_assistance_path(@conn, :index) %>
