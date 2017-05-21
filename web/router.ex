@@ -44,6 +44,9 @@ defmodule Backend.Router do
     resources "/prevention_services", PreventionServiceController
     resources "/legal_services", LegalServiceController
     resources "/client_referral_sources", ClientReferralSourceController
+
+    resources "/service_providers", ServiceProviderController
+
   end
 
   scope "/api", Backend do
@@ -64,5 +67,6 @@ defmodule Backend.Router do
     resources "/prevention_services", Api.PreventionServiceController, only: [:index, :show]
     resources "/legal_services", Api.LegalServiceController, only: [:index, :show]
     resources "/client_referral_sources", Api.ClientReferralSourceController, only: [:index, :show]
+    resources "/service_providers", Api.ServiceProviderController, only: [:index, :show]
   end
 end

@@ -1,0 +1,38 @@
+<h2>Listing service providers</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Organization name</th>
+      <th>Contact name</th>
+      <th>Website</th>
+      <th>Contact phone</th>
+      <th>Email</th>
+      <th>Languages</th>
+      <th>Hotline phone</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for service_provider <- @service_providers do %>
+    <tr>
+      <td><%= service_provider.organization_name %></td>
+      <td><%= service_provider.contact_name %></td>
+      <td><%= service_provider.website %></td>
+      <td><%= service_provider.contact_phone %></td>
+      <td><%= service_provider.email %></td>
+      <td><%= service_provider.languages %></td>
+      <td><%= service_provider.hotline_phone %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: service_provider_path(@conn, :show, service_provider), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: service_provider_path(@conn, :edit, service_provider), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: service_provider_path(@conn, :delete, service_provider), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New service provider", to: service_provider_path(@conn, :new) %>

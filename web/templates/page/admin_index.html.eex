@@ -47,6 +47,9 @@
       <li>
         <a href="<%= client_referral_source_path(@conn, :index)%>">Client referral sources</a>
       </li>
+      <li>
+        <a href="<%= service_provider_path(@conn, :index)%>">Service providers</a>
+      </li>
     </ul>
   </div>
 </div>
