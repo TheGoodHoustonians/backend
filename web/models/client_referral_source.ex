@@ -1,7 +1,7 @@
 defmodule Backend.ClientReferralSource do
   use Backend.Web, :model
 
-  schema "client_referral_sourcs" do
+  schema "client_referral_sources" do
     field :name, :string
     field :description, :string
 
