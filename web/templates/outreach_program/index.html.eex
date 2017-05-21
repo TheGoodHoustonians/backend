@@ -1,0 +1,28 @@
+<h2>Listing outreach programs</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for outreach_program <- @outreach_programs do %>
+    <tr>
+      <td><%= outreach_program.name %></td>
+      <td><%= outreach_program.description %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: outreach_program_path(@conn, :show, outreach_program), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: outreach_program_path(@conn, :edit, outreach_program), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: outreach_program_path(@conn, :delete, outreach_program), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New outreach program", to: outreach_program_path(@conn, :new) %>

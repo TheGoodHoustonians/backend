@@ -33,6 +33,7 @@ defmodule Backend.Router do
     resources "/substance_abuse_treatments", SubstanceAbuseTreatmentController
     resources "/target_demographics", TargetDemographicController
     resources "/support_groups", SupportGroupController
+    resources "/outreach_programs", OutreachProgramController
 
 
   end
