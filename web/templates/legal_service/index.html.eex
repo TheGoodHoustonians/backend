@@ -1,0 +1,28 @@
+<h2>Listing legal services</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for legal_service <- @legal_services do %>
+    <tr>
+      <td><%= legal_service.name %></td>
+      <td><%= legal_service.description %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: legal_service_path(@conn, :show, legal_service), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: legal_service_path(@conn, :edit, legal_service), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: legal_service_path(@conn, :delete, legal_service), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New legal service", to: legal_service_path(@conn, :new) %>

@@ -42,6 +42,7 @@ defmodule Backend.Router do
     resources "/education_services", EducationServiceController
     resources "/education_supports", EducationSupportController
     resources "/prevention_services", PreventionServiceController
+    resources "/legal_services", LegalServiceController
 
 
 
