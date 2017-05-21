@@ -19,6 +19,8 @@ defmodule Backend.Router do
     resources "/users", UserController
 
     get "/", PageController, :index
+
+    get "/login", AuthController, :sign_in
   end
 
   # Other scopes may use custom stacks.
