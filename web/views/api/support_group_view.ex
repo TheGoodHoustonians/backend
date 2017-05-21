@@ -9,7 +9,7 @@ defmodule Backend.Api.SupportGroupView do
     %{data: render_one(sg, Backend.Api.SupportGroupView, "support_group.json")}
   end
 
-  def render("support_group.json", %{sg: sg}) do
-    sg
+  def render("support_group.json", %{support_group: sg}) do
+    %{name: sg.name, description: sg.description, id: sg.id}
   end
 end

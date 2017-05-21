@@ -9,7 +9,7 @@ defmodule Backend.Api.PreventionServiceView do
     %{data: render_one(ps, Backend.Api.PreventionServiceView, "prevention_service.json")}
   end
 
-  def render("prevention_service.json", %{ps: ps}) do
-    ps
+  def render("prevention_service.json", %{prevention_service: ps}) do
+    %{name: ps.name, description: ps.description, id: ps.id}
   end
 end

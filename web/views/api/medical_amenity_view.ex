@@ -9,7 +9,7 @@ defmodule Backend.Api.MedicalAmenityView do
     %{data: render_one(ma, Backend.Api.MedicalAmenityView, "medical_amenity.json")}
   end
 
-  def render("medical_amenity.json", %{ma: ma}) do
-    ma
+  def render("medical_amenity.json", %{medical_amenity: ma}) do
+     %{name: ma.name, description: ma.description, id: ma.id}
   end
 end

@@ -9,7 +9,8 @@ defmodule Backend.Api.LegalServiceView do
     %{data: render_one(ls, Backend.Api.LegalServiceView, "legal_service.json")}
   end
 
-  def render("legal_service.json", %{ls: ls}) do
-    ls
+  def render("legal_service.json", %{legal_service: ls}) do
+    %{name: ls.name, description: ls.description, id: ls.id}
   end
+
 end

@@ -9,7 +9,7 @@ defmodule Backend.Api.ClientReferralSourceView do
     %{data: render_one(crs, Backend.Api.ClientReferralSourceView, "client_referral_source.json")}
   end
 
-  def render("client_referral_source.json", %{crs: crs}) do
-    crs
+  def render("client_referral_source.json", %{client_referral_source: crs}) do
+    %{name: crs.name, description: crs.description, id: crs.id}
   end
 end

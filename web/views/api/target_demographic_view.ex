@@ -9,7 +9,7 @@ defmodule Backend.Api.TargetDemographicView do
     %{data: render_one(td, Backend.Api.TargetDemographicView, "target_demographic.json")}
   end
 
-  def render("target_demographic.json", %{td: td}) do
-    td
+  def render("target_demographic.json", %{target_demographic: td}) do
+    %{name: td.name, description: td.description, id: td.id}
   end
 end

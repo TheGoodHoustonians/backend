@@ -8,7 +8,7 @@ defmodule Backend.Api.ShelterCapabilityView do
     %{data: render_one(sc, Backend.Api.ShelterCapabilityView, "shelter_capability.json")}
   end
 
-  def render("shelter_capability.json", %{sc: sc}) do
-    sc
+  def render("shelter_capability.json", %{shelter_capability: sc}) do
+    %{name: sc.name, description: sc.description, id: sc.id}
   end
 end

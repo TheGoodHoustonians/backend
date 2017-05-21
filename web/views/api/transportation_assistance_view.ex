@@ -9,7 +9,7 @@ defmodule Backend.Api.TransportationAssistanceView do
     %{data: render_one(ta, Backend.Api.TransportationAssistanceView, "transportation_assistance.json")}
   end
 
-  def render("transportation_assistance.json", %{ta: ta}) do
-    ta
+  def render("transportation_assistance.json", %{transportation_assistance: ta}) do
+    %{name: ta.name, description: ta.description, id: ta.id}
   end
 end

@@ -9,7 +9,7 @@ defmodule Backend.Api.ClientRequirementView do
     %{data: render_one(cr, Backend.Api.ClientRequirementView, "client_requirement.json")}
   end
 
-  def render("client_requirement.json", %{crs: crs}) do
-    crs
+  def render("client_requirement.json", %{client_requirement: cr}) do
+    %{name: cr.name, description: cr.description, id: cr.id}
   end
 end

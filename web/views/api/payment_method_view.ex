@@ -9,8 +9,8 @@ defmodule Backend.Api.PaymentMethodView do
     %{data: render_one(pm, Backend.Api.PaymentMethodView, "payment_method.json")}
   end
 
-  def render("payment_method.json", %{pm: pm}) do
-    pm
+  def render("payment_method.json", %{payment_method: pm}) do
+     %{name: pm.name, description: pm.description, id: pm.id}
   end
 
 end

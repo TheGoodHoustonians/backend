@@ -9,8 +9,8 @@ defmodule Backend.Api.EducationSupportView do
     %{data: render_one(esu, Backend.Api.EducationSupportView, "education_support.json")}
   end
 
-  def render("education_support.json", %{esu: esu}) do
-    esu
+  def render("education_support.json", %{education_support: esu}) do
+    %{name: esu.name, description: esu.description, id: esu.id}
   end
 
 end

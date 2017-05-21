@@ -29,7 +29,6 @@ defmodule Backend.Router do
     get "/registration/new", UserController, :new
     post "/registration", UserController, :create
 
-    # here we go
     resources "/client_requirements", ClientRequirementController
     resources "/substance_abuse_treatments", SubstanceAbuseTreatmentController
     resources "/target_demographics", TargetDemographicController
@@ -49,5 +48,21 @@ defmodule Backend.Router do
 
   scope "/api", Backend do
     pipe_through :api
+
+    resources "/client_requirements", Api.ClientRequirementController, only: [:index, :show]
+    resources "/substance_abuse_treatments", Api.SubstanceAbuseTreatmentController, only: [:index, :show]
+    resources "/target_demographics", Api.TargetDemographicController, only: [:index, :show]
+    resources "/support_groups", Api.SupportGroupController, only: [:index, :show]
+    resources "/outreach_programs", Api.OutreachProgramController, only: [:index, :show]
+    resources "/payment_methods", Api.PaymentMethodController, only: [:index, :show]
+    resources "/shelter_capabilities", Api.ShelterCapabilityController, only: [:index, :show]
+    resources "/services", Api.ServiceController, only: [:index, :show]
+    resources "/medical_amenities", Api.MedicalAmenityController, only: [:index, :show]
+    resources "/transportation_assistances", Api.TransportationAssistanceController, only: [:index, :show]
+    resources "/education_services", Api.EducationServiceController, only: [:index, :show]
+    resources "/education_supports", Api.EducationSupportController, only: [:index, :show]
+    resources "/prevention_services", Api.PreventionServiceController, only: [:index, :show]
+    resources "/legal_services", Api.LegalServiceController, only: [:index, :show]
+    resources "/client_referral_sources", Api.ClientReferralSourceController, only: [:index, :show]
   end
 end

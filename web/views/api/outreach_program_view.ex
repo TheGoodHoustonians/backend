@@ -9,7 +9,7 @@ defmodule Backend.Api.OutreachProgramView do
     %{data: render_one(op, Backend.Api.OutreachProgramView, "outreach_program.json")}
   end
 
-  def render("outreach_program.json", %{op: op}) do
-    op
+  def render("outreach_program.json", %{outreach_program: op}) do
+     %{name: op.name, description: op.description, id: op.id}
   end
 end
