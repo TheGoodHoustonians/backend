@@ -2,6 +2,7 @@ defmodule Backend.UserController do
   use Backend.Web, :controller
 
   alias Backend.User
+  alias Backend.Actions.RegisterUser
 
   def index(conn, _params) do
     users = Repo.all(User)
@@ -13,16 +14,22 @@ defmodule Backend.UserController do
     render(conn, "new.html", changeset: changeset)
   end
 
-  def create(conn, %{"user" => user_params}) do
-    changeset = User.changeset(%User{}, user_params)
+  def create(conn, %{ "register" => %{
+      "display_name" => display_name,
+      "email" => email,
+      "password" => password
+    }}) do
 
-    case Repo.insert(changeset) do
-      {:ok, _user} ->
+    case RegisterUser.execute(display_name, email, password) do
+      {:error, errors} ->
         conn
-        |> put_flash(:info, "User created successfully.")
-        |> redirect(to: user_path(conn, :index))
-      {:error, changeset} ->
-        render(conn, "new.html", changeset: changeset)
+        |> put_flash(:error, "Sorry, we couldn't register you")
+        |> render("new.html", errors: errors)
+      {:ok, user} ->
+        conn
+        |> put_session(:current_user, user.id)
+        |> put_flash(:success, "Registration successful")
+        |> redirect(to: "/")
     end
   end
 

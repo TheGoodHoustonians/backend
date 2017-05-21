@@ -1,6 +1,35 @@
-<h2>New user</h2>
+<div class="authentication-page">
+  <h1>Registration</h1>
 
-<%= render "form.html", changeset: @changeset,
-                        action: user_path(@conn, :create) %>
+  <%= form_for @conn, "/registration", [as: :register, name: :register], fn f -> %>
 
-<%= link "Back", to: user_path(@conn, :index) %>
+    <%= if @conn.assigns[:errors] do %>
+      <ul class="errors">
+        <%= for error <- @conn.assigns[:errors] do %>
+          <li>
+            <%= error %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <div class="form-group">
+      <label for="display_name">Display Name</label>
+      <%= text_input f, :display_name, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <%= text_input f, :email, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <%= password_input f, :password, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= submit "Submit", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
