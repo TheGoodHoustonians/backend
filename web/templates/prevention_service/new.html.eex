@@ -1,0 +1,6 @@
+<h2>New prevention service</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: prevention_service_path(@conn, :create) %>
+
+<%= link "Back", to: prevention_service_path(@conn, :index) %>
