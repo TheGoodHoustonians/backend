@@ -1,0 +1,28 @@
+<h2>Listing medical amenities</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for medical_amenity <- @medical_amenities do %>
+    <tr>
+      <td><%= medical_amenity.name %></td>
+      <td><%= medical_amenity.description %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: medical_amenity_path(@conn, :show, medical_amenity), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: medical_amenity_path(@conn, :edit, medical_amenity), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: medical_amenity_path(@conn, :delete, medical_amenity), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New medical amenity", to: medical_amenity_path(@conn, :new) %>

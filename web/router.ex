@@ -37,6 +37,7 @@ defmodule Backend.Router do
     resources "/payment_methods", PaymentMethodController
     resources "/shelter_capabilities", ShelterCapabilityController
     resources "/services", ServiceController
+    resources "/medical_amenities", MedicalAmenityController
 
 
   end
